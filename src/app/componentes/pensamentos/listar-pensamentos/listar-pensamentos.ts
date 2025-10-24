@@ -3,6 +3,7 @@ import { RouterLink } from "@angular/router";
 import { PensamentoComponent } from "../pensamento/pensamento";
 import { CommonModule,} from '@angular/common';
 import { Pensamento } from '../pensamento';
+import { PensamentoService } from '../pensamento.service';
 
 @Component({
   selector: 'app-listar-pensamentos',
@@ -15,9 +16,11 @@ export class ListarPensamentos implements OnInit{
 
   listaPensamentos: Pensamento[] = [];
 
-  constructor() { }
+  constructor(private service: PensamentoService) { }
 
  ngOnInit(): void {
-
+  this.service.listar().subscribe((listaPensamentos) => {
+    this.listaPensamentos = listaPensamentos;
+  });
  }
 }
