@@ -46,5 +46,15 @@ Você poderá **editar e excluir** qualquer pensamento cadastrado. Uma aplicaç�
  **Clone o repositório**:  
    ```bash
    git clone "https://github.com/carolfranca0310/Memoteca-Mural"
-    ng serve --open
+   ---
+   ```
+ **Rode o angular**:  
+   ```bash
+   ng serve --open
+   ---
+   ```
+ **Rode o back**:  
+   ```bash
+   npm start
+   ---
    ```
